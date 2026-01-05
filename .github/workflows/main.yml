@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Call n8n Webhook
         run: |
-          curl -X POST "https://cnmade-n8n.hf.space/webhook-test/74577981-e98e-4abc-baa7-9d7834f7cd0f" \
+          curl -X POST "https://cnmade-n8n.hf.space/webhook/74577981-e98e-4abc-baa7-9d7834f7cd0f" \
                -H "Content-Type: application/json" \
                -d '{"trigger": "daily"}'
