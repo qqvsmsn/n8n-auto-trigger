@@ -1,0 +1,17 @@
+name: Trigger n8n Workflow Daily
+
+on:
+  schedule:
+    # 每天 UTC 1:00（北京时间 9:00）触发
+    - cron: '35 2 * * *'
+  workflow_dispatch:  # 支持手动触发测试
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call n8n Webhook
+        run: |
+          curl -X POST "https://cnmade-n8n.hf.space/webhook-test/74577981-e98e-4abc-baa7-9d7834f7cd0f" \
+               -H "Content-Type: application/json" \
+               -d '{"trigger": "daily"}'
