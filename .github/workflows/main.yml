@@ -3,7 +3,7 @@ name: Trigger n8n Workflow Daily
 on:
   schedule:
     # 每天 UTC 1:00（北京时间 9:00）触发
-    - cron: '45 * * * *'
+    - cron: '6 3 * * *'
   workflow_dispatch:  # 支持手动触发测试
 
 jobs:
